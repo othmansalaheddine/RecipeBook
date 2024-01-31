@@ -6,21 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
-        <div>
-     
-        <input type="file" name="filetoupload" placeholder="upload ur img here" />
-        </div>
-        
-        <div>
+<form action="{{ route('recipe.store') }}" method="post">
+    @csrf
+    @method('post')
+    <div>
+        <input type="file" name="filetoupload" placeholder="Upload your image here" />
+    </div>
+    
+    <div>
         <label for="">Name</label>
         <input type="text" name="name" placeholder="Name" />
-        </div>
+    </div>
 
-        <div>
-        <label for="">Discription</label>
-        <input type="text" name="name" placeholder="discription" />
-        </div>
-    </form>
+    <div>
+        <label for="">Description</label>
+        <input type="text" name="description" placeholder="Description" />
+    </div>
+
+    <div>
+        <input type="submit" value="Save the recipe" />
+    </div>
+</form>
+
 </body>
 </html>
