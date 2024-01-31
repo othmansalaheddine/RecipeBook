@@ -23,3 +23,4 @@ Route::get('/', function () {
 
 Route::get('/recipe', [RecipeController::class, 'index'])->name('recipe.index');
 Route::get('/recipe/create', [RecipeController::class, 'create'])->name('recipe.create');
+Route::post('/recipe/create', [RecipeController::class, 'store'])->name('recipe.store');

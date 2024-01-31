@@ -11,6 +11,6 @@ class RecipeController extends Controller
     
    }
    public function create(){
-      return view ('product.create');
+      return view ('recipe.create');
    }
 }
