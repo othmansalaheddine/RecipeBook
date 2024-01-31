@@ -9,9 +9,7 @@
 <form action="{{ route('recipe.store') }}" method="post">
     @csrf
     @method('post')
-    <div>
-        <input type="file" name="filetoupload" placeholder="Upload your image here" />
-    </div>
+    
     
     <div>
         <label for="">Name</label>
@@ -22,7 +20,11 @@
         <label for="">Description</label>
         <input type="text" name="description" placeholder="Description" />
     </div>
-
+    <br>
+    <div>
+        <input type="file" name="filetoupload" placeholder="Upload your image here" />
+    </div>
+    <br>
     <div>
         <input type="submit" value="Save the recipe" />
     </div>
