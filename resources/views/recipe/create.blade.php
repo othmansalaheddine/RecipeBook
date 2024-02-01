@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="{{ route('recipe.store') }}" method="post">
+<form action="{{route('recipe.store')}}" method="post" enctype="multipart/form-data">
     @csrf
     @method('post')
     
@@ -18,11 +18,11 @@
 
     <div>
         <label for="">Description</label>
-        <input type="text" name="description" placeholder="Description" />
+        <input type="text" name="discription" placeholder="Description" />
     </div>
     <br>
     <div>
-        <input type="file" name="filetoupload" placeholder="Upload your image here" />
+        <input type="file" name="image" placeholder="Upload your image here" />
     </div>
     <br>
     <div>
